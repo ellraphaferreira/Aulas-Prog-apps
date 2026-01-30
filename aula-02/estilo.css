@@ -1,0 +1,25 @@
+*{padding: 5px 5px 5px 5px; margin: 0px;}
+h1{background-color: rgb(255, 255, 255);}/* classificador para todas as tags h1 */
+.bgb{background-color: blue;}
+.bgb2{background-color: rgb(0, 119, 255);}
+.bgb3{background-color: rgb(0, 183, 255);}
+#bgb4{background-color: rgb(132, 0, 255);}
+.img{box-shadow: 2px 2px 5px rgb(27, 27, 27);}
+.w95{width: 95%;}
+.w70{width: 70%;}
+.w30{width: 30%;}
+.h90{height: 90%}
+.h40{height: 40%}
+.h60vh{height: 60vh;}
+.h20vh{height: 20vh;}
+.jsc{justify-self: center;}
+.jcc{justify-content: center;}
+.asc{align-self: center;}
+.df{display: flex;}
+.bdr{border-radius: 10px;}
+.bxs{box-shadow: 2px 2px 5px rgb(27, 27, 27);}
+.img:hover{ 
+    transition: 0.5s;
+    transform: scale(30);
+    transition: 5s;
+    rotate: 360deg;}
