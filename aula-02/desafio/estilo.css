@@ -17,7 +17,26 @@
     width: 33%;
     height: 33%;    
     background-color: rgb(242, 255, 127);}
-.alitce {align-items: center;}
+
+.fx{display: flex;}
+/*justify*/
+.juitce {justify-items: center;}
+
+.jucoce {justify-content: center;}
+.jucosb{justify-content: space-between;}
+
+.jusece {justify-self: center;}
+.juseend {justify-self: end;}
+/*align*/
+.alcoce {align-content: space-between;}
+
 .alitend{align-items: end;}
 .alitstart{align-items: start;}
-.juco-spacebetwen{justify-content: space-between;}
+.alitce{align-items: center;}
+
+.alseend{align-self: end;}
+.alsestart{align-self: start;}
+.alsece{align-self: center;}
+
+/*flex*/
+.fd{flex-direction: column;}
