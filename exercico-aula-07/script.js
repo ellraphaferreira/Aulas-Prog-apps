@@ -18,44 +18,89 @@ const users = [
 
     
 
-const filters = {
-    "Usuários Ativos": users.filter(u => u.active),
-    "Usuários Inativos": users.filter(u => !u.active),
-    "Desenvolvedores": users.filter(u => u.role === "dev"),
-    "Designers": users.filter(u => u.role === "designer"),
-    "Managers": users.filter(u => u.role === "manager"),
-    "Analistas de Dados": users.filter(u => u.role === "data_analyst"),
-    "Salário > 5000": users.filter(u => u.salary > 5000),
-    "Salário < 4000": users.filter(u => u.salary < 4000),
-    "Maiores de 30 anos": users.filter(u => u.age > 30),
-    "Menores de 25 anos": users.filter(u => u.age < 25),
-    "Analistas de Dados Ativos": users.filter(u => u.role === "data_analyst" && u.active),
-    "Devs com salário > 4000": users.filter(u => u.role === "dev" && u.salary > 4000),
-    "Managers com mais de 30 anos": users.filter(u => u.role === "manager" && u.age > 30)
-  };
+// const filters = {
+//     "Usuários Ativos": users.filter(u => u.active),
+//     "Usuários Inativos": users.filter(u => !u.active),
+//     "Desenvolvedores": users.filter(u => u.role === "dev"),
+//     "Designers": users.filter(u => u.role === "designer"),
+//     "Managers": users.filter(u => u.role === "manager"),
+//     "Analistas de Dados": users.filter(u => u.role === "data_analyst"),
+//     "Salário > 5000": users.filter(u => u.salary > 5000),
+//     "Salário < 4000": users.filter(u => u.salary < 4000),
+//     "Maiores de 30 anos": users.filter(u => u.age > 30),
+//     "Menores de 25 anos": users.filter(u => u.age < 25),
+//     "Analistas de Dados Ativos": users.filter(u => u.role === "data_analyst" && u.active),
+//     "Devs com salário > 4000": users.filter(u => u.role === "dev" && u.salary > 4000),
+//     "Managers com mais de 30 anos": users.filter(u => u.role === "manager" && u.age > 30)
+//   };
   
-  const resultsDiv = document.getElementById("results");
+//   const resultsDiv = document.getElementById("results");
   
-  for (let title in filters) {
-    const section = document.createElement("div");
-    const heading = document.createElement("h2");
-    heading.textContent = title;
-    section.appendChild(heading);
+//   for (let title in filters) {
+//     const section = document.createElement("div");
+//     const heading = document.createElement("h2");
+//     heading.textContent = title;
+//     section.appendChild(heading);
   
-    const list = document.createElement("ul");
+//     const list = document.createElement("ul");
     
-    filters[title].forEach(user => {
-      const li = document.createElement("li");
-      li.textContent = `${user.name} | Idade: ${user.age} | Salário: R$${user.salary} | Cargo: ${user.role} | Ativo: ${user.active}`;
-      list.appendChild(li);
-    });
+//     filters[title].forEach(user => {
+//       const li = document.createElement("li");
+//       li.textContent = `${user.name} | Idade: ${user.age} | Salário: R$${user.salary} | Cargo: ${user.role} | Ativo: ${user.active}`;
+//       list.appendChild(li);
+//     });
   
-    if (filters[title].length === 0) {
-      const li = document.createElement("li");
-      li.textContent = "Nenhum usuário encontrado.";
-      list.appendChild(li);
-    }
+//     if (filters[title].length === 0) {
+//       const li = document.createElement("li");
+//       li.textContent = "Nenhum usuário encontrado.";
+//       list.appendChild(li);
+//     }
   
-    section.appendChild(list);
-    resultsDiv.appendChild(section);
-  }
+//     section.appendChild(list);
+//     resultsDiv.appendChild(section);
+//   }
+
+//  // const ageavg = users.reduce((acc, user) => {
+//  //   return acc + user.age / users.length
+ // // },0)
+
+ // // console.log(ageavg)
+
+
+ const arr2 =[1,2,3,4,5]
+
+ const mappedarr = arr2.map((arr)=>{
+  return arr * 2
+ })
+ console.log(mappedarr)
+
+
+ const mappeduser = users.map((user)=>{
+  return {name : user.name, role: user.role}
+ })
+
+ console.log(mappeduser)
+
+ const mappeduse2 = users.map((user)=>{
+  return {name : user.name}
+ })
+
+ console.log(mappeduse2)
+
+ const mappeduse3 = users.map((user)=>{
+  return {name: user.name.toUpperCase()}
+ })
+
+ console.log(mappeduse3)
+
+ const mappeduse4 = users.map((user)=>{
+  return {anual_salary: (user.salary * 12)}
+ })
+
+ console.log(mappeduse4)
+
+ const mappeduse5 = users.map((user)=>{
+  return {name: user.name,age: user.age}
+ })
+
+ console.log(mappeduse5)
